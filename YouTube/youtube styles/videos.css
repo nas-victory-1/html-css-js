@@ -1,0 +1,132 @@
+.video-thumbnail{
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    
+}
+
+.video-profile{
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+}
+
+.video-about{
+    line-height: 24px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.video-author{
+    margin-bottom: 6px;
+    color: rgb(15, 15, 15);
+}
+
+.video-views{
+    color: rgb(15, 15, 15);
+} 
+
+
+.text{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-pic{
+    position: relative;
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border-radius: 19px;
+    cursor: pointer;
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 17px;
+}
+
+@media (max-width: 800px){
+    .videos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:801px) and (max-width:999px) {
+    .videos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 1000px){
+    .videos{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.thumbnail{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    display: inline-block;
+   
+}
+
+.video-time{
+    color: white;
+    background-color: black;
+    position: absolute;
+    font-size: 15px;
+    border-radius: 3px;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.video-tooltip{
+    display: flex;
+    background-color: white;
+    z-index: 300;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    white-space: nowrap;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    bottom: -75px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+.profile-pic:hover .video-tooltip{
+    opacity: 1;
+}
+
+.video-tooltip img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.video-tooltip .author{
+    font-weight: 600;
+}
+
+.video-tooltip .subscribers{
+    color: rgb(15, 15, 15);
+    margin-top: 5px;
+    font-weight:lighter;
+}
